@@ -1,10 +1,12 @@
 ﻿
+using System;
+
 namespace QuickFix
 {
     /// <summary>
     /// File log implementation
     /// </summary>
-    public class FileLog : ILog, System.IDisposable
+    public class FileLog : ILog, ILogEventsWithDetail, System.IDisposable
     {
         private object sync_ = new object();
 
@@ -24,8 +26,8 @@ namespace QuickFix
         public FileLog(string fileLogPath, SessionID sessionID)
         {
             Init(fileLogPath, Prefix(sessionID));
-        }   
-        
+        }
+
 
         private void Init(string fileLogPath, string prefix)
         {
@@ -35,8 +37,8 @@ namespace QuickFix
             messageLogFileName_ = System.IO.Path.Combine(fileLogPath, prefix + ".messages.current.log");
             eventLogFileName_ = System.IO.Path.Combine(fileLogPath, prefix + ".event.current.log");
 
-            messageLog_ = new System.IO.StreamWriter(messageLogFileName_,true);
-            eventLog_ = new System.IO.StreamWriter(eventLogFileName_,true);
+            messageLog_ = new System.IO.StreamWriter(messageLogFileName_, true);
+            eventLog_ = new System.IO.StreamWriter(eventLogFileName_, true);
 
             messageLog_.AutoFlush = true;
             eventLog_.AutoFlush = true;
@@ -113,10 +115,28 @@ namespace QuickFix
 
             lock (sync_)
             {
-                eventLog_.WriteLine(Fields.Converters.DateTimeConverter.Convert(System.DateTime.UtcNow) + " : "+ s);
+                eventLog_.WriteLine(Fields.Converters.DateTimeConverter.Convert(System.DateTime.UtcNow) + " : " + s);
             }
         }
 
+        public void OnEvent(string s, Severity severity, Exception x = null)
+        {
+            DisposedCheck();
+
+            lock (sync_)
+            {
+                eventLog_.WriteLine(Fields.Converters.DateTimeConverter.Convert(System.DateTime.UtcNow) + "( " + severity + ") : " + s);
+
+
+                var exception = x;
+                while (exception != null)
+                {
+                    eventLog_.WriteLine("  >> Caused by " + exception.GetType().Name + ": " + exception.Message);
+                    eventLog_.WriteLine("  >> At: " + exception.StackTrace);
+                    exception = exception.InnerException;
+                }
+            }
+        }
         #endregion
 
         #region IDisposable Members
@@ -131,6 +151,7 @@ namespace QuickFix
 
             _disposed = true;
         }
+
 
         #endregion
     }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using NUnit.Framework;
+using QuickFix;
 
 namespace UnitTests
 {
@@ -63,7 +64,7 @@ namespace UnitTests
             QuickFix.FileLogFactory factory = new QuickFix.FileLogFactory(settings);
             log = (QuickFix.FileLog)factory.Create(sessionID);
 
-            log.OnEvent("some event");
+            log.OnEvent("some event", Severity.Info);
             log.OnIncoming("some incoming");
             log.OnOutgoing("some outgoing");
 

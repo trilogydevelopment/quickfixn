@@ -204,7 +204,7 @@ namespace QuickFix.Transport
                 }
                 catch (System.Security.Authentication.AuthenticationException ex)
                 {
-                    log_.OnEvent("Unable to perform authentication against server: " + ex.Message);
+                    log_.OnEvent("Unable to perform authentication against server: " + ex.Message, Severity.Error, ex);
                     throw;
                 }
 
@@ -234,7 +234,7 @@ namespace QuickFix.Transport
                 }
                 catch (System.Security.Authentication.AuthenticationException ex)
                 {
-                    log_.OnEvent("Unable to perform authentication against server: " + ex.Message);
+                    log_.OnEvent("Unable to perform authentication against server: " + ex.Message, Severity.Error, ex);
                     throw;
                 }
 
@@ -300,9 +300,9 @@ namespace QuickFix.Transport
                 if (!ContainsEnhancedKeyUsage(certificate, enhancedKeyUsage))
                 {
                     if (enhancedKeyUsage == clientAuthenticationOid)
-                        log_.OnEvent("Remote certificate is not intended for client authentication: It is missing enhanced key usage " + enhancedKeyUsage);
+                        log_.OnEvent("Remote certificate is not intended for client authentication: It is missing enhanced key usage " + enhancedKeyUsage, Severity.Error);
                     else
-                        log_.OnEvent("Remote certificate is not intended for server authentication: It is missing enhanced key usage " + enhancedKeyUsage);
+                        log_.OnEvent("Remote certificate is not intended for server authentication: It is missing enhanced key usage " + enhancedKeyUsage, Severity.Error);
 
                     return false;
                 }
@@ -329,7 +329,7 @@ namespace QuickFix.Transport
                 // Any basic authentication check failed, do after checking CA
                 if (sslPolicyErrors != SslPolicyErrors.None)
                 {
-                    log_.OnEvent("Remote certificate was not recognized as a valid certificate: " + sslPolicyErrors);
+                    log_.OnEvent("Remote certificate was not recognized as a valid certificate: " + sslPolicyErrors, Severity.Error);
                     return false;
                 }
 

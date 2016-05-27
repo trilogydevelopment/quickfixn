@@ -75,7 +75,7 @@ namespace QuickFix
 
         public void Shutdown(string reason)
         {
-            Log("shutdown requested: " + reason);
+            this.GetLog().OnEvent("shutdown requested: " + reason, Severity.Info);
             isShutdownRequested_ = true;
         }
 
@@ -102,7 +102,7 @@ namespace QuickFix
                 }
             }
 
-            this.Log("shutdown");
+            this.GetLog().OnEvent("shutdown", Severity.Info);
             OnExited();
         }
 
@@ -110,13 +110,7 @@ namespace QuickFix
         {
             if (Exited != null)
                 Exited(this, new ExitedEventArgs(this));
-        }
-
-        /// FIXME do real logging
-        public void Log(string s)
-        {
-            log_.OnEvent(s);
-        }
+        } 
 
         /// <summary>
         /// Provide StreamReader with access to the log

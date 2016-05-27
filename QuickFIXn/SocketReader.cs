@@ -134,7 +134,7 @@ namespace QuickFix
                     qfSession_ = Session.LookupSession(Message.GetReverseSessionID(msg));
                     if (null == qfSession_)
                     {
-                        this.Log("ERROR: Disconnecting; received message for unknown session: " + msg);
+                        this.responder_.GetLog().OnEvent("ERROR: Disconnecting; received message for unknown session: " + msg, Severity.Error);
                         DisconnectClient();
                         return;
                     }
@@ -151,7 +151,7 @@ namespace QuickFix
                 }
                 catch (System.Exception e)
                 {
-                    this.Log("Error on Session '" + qfSession_.SessionID + "': " + e.ToString());
+                    this.responder_.GetLog().OnEvent("Error on Session '" + qfSession_.SessionID + "': " + e.ToString(), Severity.Error, e);
                 }
             }
             catch (InvalidMessage e)
@@ -170,12 +170,12 @@ namespace QuickFix
             {
                 if (Fields.MsgType.LOGON.Equals(Message.GetMsgType(msg)))
                 {
-                    this.Log("ERROR: Invalid LOGON message, disconnecting: " + e.Message);
+                    this.responder_.GetLog().OnEvent("ERROR: Invalid LOGON message, disconnecting: " + e.Message, Severity.Error, e);
                     DisconnectClient();
                 }
                 else
                 {
-                    this.Log("ERROR: Invalid message: " + e.Message);
+                    this.responder_.GetLog().OnEvent("ERROR: Invalid message: " + e.Message, Severity.Error, e);
                 }
             }
             catch (InvalidMessage)
@@ -220,14 +220,14 @@ namespace QuickFix
             if (qfSession_.HasResponder)
             {
                 qfSession_.Log.OnIncoming(msg);
-                qfSession_.Log.OnEvent("Multiple logons/connections for this session are not allowed (" + tcpClient_.Client.RemoteEndPoint + ")");
+                qfSession_.Log.OnEvent("Multiple logons/connections for this session are not allowed (" + tcpClient_.Client.RemoteEndPoint + ")", Severity.Error);
                 qfSession_ = null;
                 DisconnectClient();
                 return false;
             }
-            qfSession_.Log.OnEvent(qfSession_.SessionID + " Socket Reader " + GetHashCode() + " accepting session " + qfSession_.SessionID + " from " + tcpClient_.Client.RemoteEndPoint);
+            qfSession_.Log.OnEvent(qfSession_.SessionID + " Socket Reader " + GetHashCode() + " accepting session " + qfSession_.SessionID + " from " + tcpClient_.Client.RemoteEndPoint, Severity.Info);
             /// FIXME do this here? qfSession_.HeartBtInt = QuickFix.Fields.Converters.IntConverter.Convert(message.GetField(Fields.Tags.HeartBtInt)); /// FIXME
-            qfSession_.Log.OnEvent(qfSession_.SessionID + " Acceptor heartbeat set to " + qfSession_.HeartBtInt + " seconds");
+            qfSession_.Log.OnEvent(qfSession_.SessionID + " Acceptor heartbeat set to " + qfSession_.HeartBtInt + " seconds", Severity.Info);
             qfSession_.SetResponder(responder_);
             return true;
         }
@@ -282,7 +282,7 @@ namespace QuickFix
                 disconnectNeeded = false;
             }
 
-            this.Log("SocketReader Error: " + reason);
+            this.responder_.GetLog().OnEvent("SocketReader Error: " + reason, Severity.Error, cause);
 
             if (disconnectNeeded)
             {
@@ -292,16 +292,7 @@ namespace QuickFix
                     DisconnectClient();
             }
         }
-
-        /// <summary>
-        /// FIXME do proper logging
-        /// </summary>
-        /// <param name="s"></param>
-        private void Log(string s)
-        {
-            responder_.Log(s);
-        }
-
+        
         public int Send(string data)
         {
             byte[] rawData = System.Text.Encoding.UTF8.GetBytes(data);

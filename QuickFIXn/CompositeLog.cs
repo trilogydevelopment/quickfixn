@@ -1,10 +1,12 @@
 ﻿
+using System;
+
 namespace QuickFix
 {
     /// <summary>
     /// File log implementation
     /// </summary>
-    internal class CompositeLog : ILog
+    internal class CompositeLog : ILog, ILogEventsWithDetail
     {
         private ILog[] logs_;
 
@@ -42,6 +44,12 @@ namespace QuickFix
             foreach (var log in logs_)
                 log.OnEvent(s);
         }
+        public void OnEvent(string s, Severity severity, Exception ex)
+        {
+            DisposedCheck();
+            foreach (var log in logs_)
+                log.OnEvent(s, severity, ex);
+        }
 
         public void Dispose()
         {
@@ -55,5 +63,6 @@ namespace QuickFix
             if (_disposed)
                 throw new System.ObjectDisposedException(this.GetType().Name);
         }
+
     }
 }

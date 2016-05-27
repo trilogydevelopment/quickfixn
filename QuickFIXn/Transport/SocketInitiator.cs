@@ -59,7 +59,7 @@ namespace QuickFix.Transport
             {
                 t.Connect();
                 t.Initiator.SetConnected(t.Session.SessionID);
-                t.Session.Log.OnEvent("Connection succeeded");
+                t.Session.Log.OnEvent("Connection succeeded", Severity.Info);
                 t.Session.Next();
                 while (t.Read())
                 { }
@@ -69,15 +69,15 @@ namespace QuickFix.Transport
             }
             catch (IOException ex) // Can be exception when connecting, during ssl authentication or when reading
             {
-                t.Session.Log.OnEvent("Connection failed: " + ex.Message);
+                t.Session.Log.OnEvent("Connection failed: " + ex.Message, Severity.Error, ex);
             }
             catch (SocketException e) 
             {
-                t.Session.Log.OnEvent("Connection failed: " + e.Message);
+                t.Session.Log.OnEvent("Connection failed: " + e.Message, Severity.Error, e);
             }
             catch (System.Security.Authentication.AuthenticationException ex) // some certificate problems
             {
-                t.Session.Log.OnEvent("Connection failed (AuthenticationException): " + ex.Message);
+                t.Session.Log.OnEvent("Connection failed (AuthenticationException): " + ex.Message, Severity.Error, ex);
             }
             catch (Exception)
             {
@@ -223,7 +223,7 @@ namespace QuickFix.Transport
 
                 IPEndPoint socketEndPoint = GetNextSocketEndPoint(sessionID, settings);
                 SetPending(sessionID);
-                session.Log.OnEvent("Connecting to " + socketEndPoint.Address + " on port " + socketEndPoint.Port);
+                session.Log.OnEvent("Connecting to " + socketEndPoint.Address + " on port " + socketEndPoint.Port, Severity.Info);
 
                 //Setup socket settings based on current section
                 var socketSettings = socketSettings_.Clone();
@@ -238,7 +238,7 @@ namespace QuickFix.Transport
             catch (System.Exception e)
             {
                 if (null != session)
-                    session.Log.OnEvent(e.Message);
+                    session.Log.OnEvent(e.Message, Severity.Error, e);
             }
         }
 

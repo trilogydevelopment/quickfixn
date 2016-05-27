@@ -95,7 +95,7 @@ namespace QuickFix
                         clientThreads_.Add(t.Id, t);
                     }
                     // FIXME set the client thread's exception handler here
-                    t.Log("connected");
+                    t.GetLog().OnEvent("connected", Severity.Info);
                     t.Start();
                 }
                 catch (System.Exception e)
@@ -157,7 +157,7 @@ namespace QuickFix
                         }
                         catch (System.Exception e)
                         {
-                            t.Log("Error shutting down: " + e.Message);
+                            t.GetLog().OnEvent("Error shutting down: " + e.Message, Severity.Error, e);
                         }
                         t.Dispose();
                     }

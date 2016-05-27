@@ -406,7 +406,7 @@ namespace QuickFix
             lock (sync_)
             {
                 this.MessageStore.Reset();
-                this.Log.OnEvent("Session reset: " + reason);
+                this.Log.OnEvent("Session reset: " + reason, Severity.Info);
             }
         }
 

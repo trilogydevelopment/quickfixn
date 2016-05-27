@@ -4,7 +4,7 @@ namespace QuickFix
     /// <summary>
     /// FIXME - needs to log sessionIDs, timestamps, etc.
     /// </summary>
-    public class ScreenLog : ILog
+    public class ScreenLog : ILog, ILogEventsWithDetail
     {
         private object sync_ = new object();
         private bool logIncoming_;
@@ -15,7 +15,7 @@ namespace QuickFix
         {
             logIncoming_ = logIncoming;
             logOutgoing_ = logOutgoing;
-            logEvent_    = logEvent;
+            logEvent_ = logEvent;
         }
 
         #region ILog Members
@@ -27,7 +27,7 @@ namespace QuickFix
         {
             if (!logIncoming_)
                 return;
-            
+
             lock (sync_)
             {
                 System.Console.WriteLine("<incoming> " + msg);
@@ -53,6 +53,22 @@ namespace QuickFix
             lock (sync_)
             {
                 System.Console.WriteLine("<event> " + s);
+            }
+        }
+        public void OnEvent(string s, Severity severity, System.Exception ex)
+        {
+            if (!logEvent_)
+                return;
+
+            lock (sync_)
+            {
+                System.Console.WriteLine("<event> (" + severity + ") " + s);
+                var exception = ex;
+                while(exception != null) {
+                    System.Console.WriteLine("  >> Caused by " + exception.GetType().Name + ": " + exception.Message);
+                    System.Console.WriteLine("  >> At: " + exception.StackTrace);
+                    exception = exception.InnerException;
+                }
             }
         }
 

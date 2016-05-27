@@ -139,7 +139,7 @@ namespace AcceptanceTest
             try
             {
                 string msgType = message.Header.GetField(QuickFix.Fields.Tags.MsgType);
-                log_.OnEvent("Got message " + msgType);
+                log_.OnEvent("Got message " + msgType, Severity.Info);
                 System.Console.WriteLine("===got message " + msgType);
                 Crack(message, sessionID);
             }
@@ -149,7 +149,7 @@ namespace AcceptanceTest
             }
             catch (System.Exception e)
             {
-                log_.OnEvent("FromApp: " + e.ToString() + " while processing msg (" + message.ToString() + ")");
+                log_.OnEvent("FromApp: " + e.ToString() + " while processing msg (" + message.ToString() + ")", Severity.Info);
             }
         }
 

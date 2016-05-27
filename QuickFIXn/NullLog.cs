@@ -4,7 +4,7 @@ namespace QuickFix
     /// <summary>
     /// Log implementation that does not do anything
     /// </summary>
-    public class NullLog : ILog
+    public class NullLog : ILog, ILogEventsWithDetail
     {
         #region ILog Members
 
@@ -20,9 +20,12 @@ namespace QuickFix
         public void OnEvent(string s)
         { }
 
+        public void OnEvent(string s, Severity severity, System.Exception ex)
+        { }
+
         public void Dispose()
         { }
 
-        #endregion
+        #endregion 
     }
 }

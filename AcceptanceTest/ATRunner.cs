@@ -51,7 +51,7 @@ namespace AcceptanceTest
             }
             catch (System.Exception e)
             {
-                debugLog.OnEvent(e.ToString());
+                debugLog.OnEvent(e.ToString(), Severity.Error, e);
             }
 
             finally

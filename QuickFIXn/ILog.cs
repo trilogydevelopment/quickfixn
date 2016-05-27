@@ -36,4 +36,26 @@ namespace QuickFix
         /// <param name="s">event description</param>
         void OnEvent(string s);
     }
+
+    public interface ILogEventsWithDetail : ILog
+    {
+
+        void OnEvent(string s, Severity severity, Exception x = null);
+    }
+
+    public static class LogExtensions
+    {
+        public static void OnEvent(this ILog log, string s, Severity severity, Exception x = null)
+        {
+            var logWithSeverity = log as ILogEventsWithDetail;
+            if (logWithSeverity != null)
+                logWithSeverity.OnEvent(s, severity, x);
+            else
+                log.OnEvent(s);
+        }
+    }
+
+
+
+    public enum Severity { /* Trace = 0, Debug = 1, */ Info = 2, /*Warn = 3,*/ Error = 4 /* , Fatal = 5*/}
 }
