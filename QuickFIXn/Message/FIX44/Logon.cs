@@ -364,6 +364,161 @@ namespace QuickFix
             { 
                 return IsSetField(Tags.Password);
             }
+            public QuickFix.Fields.StrategyPreference StrategyPreference
+            { 
+                get 
+                {
+                    QuickFix.Fields.StrategyPreference val = new QuickFix.Fields.StrategyPreference();
+                    GetField(val);
+                    return val;
+                }
+                set { SetField(value); }
+            }
+            
+            public void Set(QuickFix.Fields.StrategyPreference val) 
+            { 
+                this.StrategyPreference = val;
+            }
+            
+            public QuickFix.Fields.StrategyPreference Get(QuickFix.Fields.StrategyPreference val) 
+            { 
+                GetField(val);
+                return val;
+            }
+            
+            public bool IsSet(QuickFix.Fields.StrategyPreference val) 
+            { 
+                return IsSetStrategyPreference();
+            }
+            
+            public bool IsSetStrategyPreference() 
+            { 
+                return IsSetField(Tags.StrategyPreference);
+            }
+            public QuickFix.Fields.ApplicationName ApplicationName
+            { 
+                get 
+                {
+                    QuickFix.Fields.ApplicationName val = new QuickFix.Fields.ApplicationName();
+                    GetField(val);
+                    return val;
+                }
+                set { SetField(value); }
+            }
+            
+            public void Set(QuickFix.Fields.ApplicationName val) 
+            { 
+                this.ApplicationName = val;
+            }
+            
+            public QuickFix.Fields.ApplicationName Get(QuickFix.Fields.ApplicationName val) 
+            { 
+                GetField(val);
+                return val;
+            }
+            
+            public bool IsSet(QuickFix.Fields.ApplicationName val) 
+            { 
+                return IsSetApplicationName();
+            }
+            
+            public bool IsSetApplicationName() 
+            { 
+                return IsSetField(Tags.ApplicationName);
+            }
+            public QuickFix.Fields.ApplicationVersion ApplicationVersion
+            { 
+                get 
+                {
+                    QuickFix.Fields.ApplicationVersion val = new QuickFix.Fields.ApplicationVersion();
+                    GetField(val);
+                    return val;
+                }
+                set { SetField(value); }
+            }
+            
+            public void Set(QuickFix.Fields.ApplicationVersion val) 
+            { 
+                this.ApplicationVersion = val;
+            }
+            
+            public QuickFix.Fields.ApplicationVersion Get(QuickFix.Fields.ApplicationVersion val) 
+            { 
+                GetField(val);
+                return val;
+            }
+            
+            public bool IsSet(QuickFix.Fields.ApplicationVersion val) 
+            { 
+                return IsSetApplicationVersion();
+            }
+            
+            public bool IsSetApplicationVersion() 
+            { 
+                return IsSetField(Tags.ApplicationVersion);
+            }
+            public QuickFix.Fields.ApplicationVendor ApplicationVendor
+            { 
+                get 
+                {
+                    QuickFix.Fields.ApplicationVendor val = new QuickFix.Fields.ApplicationVendor();
+                    GetField(val);
+                    return val;
+                }
+                set { SetField(value); }
+            }
+            
+            public void Set(QuickFix.Fields.ApplicationVendor val) 
+            { 
+                this.ApplicationVendor = val;
+            }
+            
+            public QuickFix.Fields.ApplicationVendor Get(QuickFix.Fields.ApplicationVendor val) 
+            { 
+                GetField(val);
+                return val;
+            }
+            
+            public bool IsSet(QuickFix.Fields.ApplicationVendor val) 
+            { 
+                return IsSetApplicationVendor();
+            }
+            
+            public bool IsSetApplicationVendor() 
+            { 
+                return IsSetField(Tags.ApplicationVendor);
+            }
+            public QuickFix.Fields.TimeStampPreference TimeStampPreference
+            { 
+                get 
+                {
+                    QuickFix.Fields.TimeStampPreference val = new QuickFix.Fields.TimeStampPreference();
+                    GetField(val);
+                    return val;
+                }
+                set { SetField(value); }
+            }
+            
+            public void Set(QuickFix.Fields.TimeStampPreference val) 
+            { 
+                this.TimeStampPreference = val;
+            }
+            
+            public QuickFix.Fields.TimeStampPreference Get(QuickFix.Fields.TimeStampPreference val) 
+            { 
+                GetField(val);
+                return val;
+            }
+            
+            public bool IsSet(QuickFix.Fields.TimeStampPreference val) 
+            { 
+                return IsSetTimeStampPreference();
+            }
+            
+            public bool IsSetTimeStampPreference() 
+            { 
+                return IsSetField(Tags.TimeStampPreference);
+            }
             public class NoMsgTypesGroup : Group
             {
                 public static int[] fieldOrder = {Tags.RefMsgType, Tags.MsgDirection, 0};

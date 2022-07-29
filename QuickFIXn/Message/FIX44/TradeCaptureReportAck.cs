@@ -924,37 +924,6 @@ namespace QuickFix
             { 
                 return IsSetField(Tags.MaturityDate);
             }
-            public QuickFix.Fields.PutOrCall PutOrCall
-            { 
-                get 
-                {
-                    QuickFix.Fields.PutOrCall val = new QuickFix.Fields.PutOrCall();
-                    GetField(val);
-                    return val;
-                }
-                set { SetField(value); }
-            }
-            
-            public void Set(QuickFix.Fields.PutOrCall val) 
-            { 
-                this.PutOrCall = val;
-            }
-            
-            public QuickFix.Fields.PutOrCall Get(QuickFix.Fields.PutOrCall val) 
-            { 
-                GetField(val);
-                return val;
-            }
-            
-            public bool IsSet(QuickFix.Fields.PutOrCall val) 
-            { 
-                return IsSetPutOrCall();
-            }
-            
-            public bool IsSetPutOrCall() 
-            { 
-                return IsSetField(Tags.PutOrCall);
-            }
             public QuickFix.Fields.CouponPaymentDate CouponPaymentDate
             { 
                 get 
@@ -1357,6 +1326,37 @@ namespace QuickFix
             public bool IsSetStrikePrice() 
             { 
                 return IsSetField(Tags.StrikePrice);
+            }
+            public QuickFix.Fields.OptionsSymbol OptionsSymbol
+            { 
+                get 
+                {
+                    QuickFix.Fields.OptionsSymbol val = new QuickFix.Fields.OptionsSymbol();
+                    GetField(val);
+                    return val;
+                }
+                set { SetField(value); }
+            }
+            
+            public void Set(QuickFix.Fields.OptionsSymbol val) 
+            { 
+                this.OptionsSymbol = val;
+            }
+            
+            public QuickFix.Fields.OptionsSymbol Get(QuickFix.Fields.OptionsSymbol val) 
+            { 
+                GetField(val);
+                return val;
+            }
+            
+            public bool IsSet(QuickFix.Fields.OptionsSymbol val) 
+            { 
+                return IsSetOptionsSymbol();
+            }
+            
+            public bool IsSetOptionsSymbol() 
+            { 
+                return IsSetField(Tags.OptionsSymbol);
             }
             public QuickFix.Fields.StrikeCurrency StrikeCurrency
             { 
@@ -2809,7 +2809,7 @@ namespace QuickFix
             }
             public class NoLegsGroup : Group
             {
-                public static int[] fieldOrder = {Tags.LegSymbol, Tags.LegSymbolSfx, Tags.LegSecurityID, Tags.LegSecurityIDSource, Tags.NoLegSecurityAltID, Tags.LegProduct, Tags.LegCFICode, Tags.LegSecurityType, Tags.LegSecuritySubType, Tags.LegMaturityMonthYear, Tags.LegMaturityDate, Tags.LegCouponPaymentDate, Tags.LegIssueDate, Tags.LegRepoCollateralSecurityType, Tags.LegRepurchaseTerm, Tags.LegRepurchaseRate, Tags.LegFactor, Tags.LegCreditRating, Tags.LegInstrRegistry, Tags.LegCountryOfIssue, Tags.LegStateOrProvinceOfIssue, Tags.LegLocaleOfIssue, Tags.LegRedemptionDate, Tags.LegStrikePrice, Tags.LegStrikeCurrency, Tags.LegOptAttribute, Tags.LegContractMultiplier, Tags.LegCouponRate, Tags.LegSecurityExchange, Tags.LegIssuer, Tags.EncodedLegIssuerLen, Tags.EncodedLegIssuer, Tags.LegSecurityDesc, Tags.EncodedLegSecurityDescLen, Tags.EncodedLegSecurityDesc, Tags.LegRatioQty, Tags.LegSide, Tags.LegCurrency, Tags.LegPool, Tags.LegDatedDate, Tags.LegContractSettlMonth, Tags.LegInterestAccrualDate, Tags.LegQty, Tags.LegSwapType, Tags.NoLegStipulations, Tags.LegPositionEffect, Tags.LegCoveredOrUncovered, Tags.NoNestedPartyIDs, Tags.LegRefID, Tags.LegPrice, Tags.LegSettlType, Tags.LegSettlDate, Tags.LegLastPx, 0};
+                public static int[] fieldOrder = {Tags.LegSymbol, Tags.LegSymbolSfx, Tags.LegSecurityID, Tags.LegSecurityIDSource, Tags.NoLegSecurityAltID, Tags.LegProduct, Tags.LegCFICode, Tags.LegSecurityType, Tags.LegSecuritySubType, Tags.LegMaturityMonthYear, Tags.LegMaturityDate, Tags.LegCouponPaymentDate, Tags.LegIssueDate, Tags.LegRepoCollateralSecurityType, Tags.LegRepurchaseTerm, Tags.LegRepurchaseRate, Tags.LegFactor, Tags.LegCreditRating, Tags.LegInstrRegistry, Tags.LegCountryOfIssue, Tags.LegStateOrProvinceOfIssue, Tags.LegLocaleOfIssue, Tags.LegRedemptionDate, Tags.LegStrikePrice, Tags.LegStrikeCurrency, Tags.LegOptAttribute, Tags.LegContractMultiplier, Tags.LegCouponRate, Tags.LegSecurityExchange, Tags.LegIssuer, Tags.EncodedLegIssuerLen, Tags.EncodedLegIssuer, Tags.LegSecurityDesc, Tags.EncodedLegSecurityDescLen, Tags.EncodedLegSecurityDesc, Tags.LegRatioQty, Tags.LegSide, Tags.LegCurrency, Tags.LegPool, Tags.LegDatedDate, Tags.LegContractSettlMonth, Tags.LegInterestAccrualDate, Tags.LegQty, Tags.LegSwapType, Tags.NoLegStipulations, Tags.LegPositionEffect, Tags.LegCoveredOrUncovered, Tags.NoNestedPartyIDs, Tags.LegRefID, Tags.LinkExecID, Tags.LegPrice, Tags.LegSettlType, Tags.LegSettlDate, Tags.LegLastPx, 0};
             
                 public NoLegsGroup() 
                   :base( Tags.NoLegs, Tags.LegSymbol, fieldOrder)
@@ -4341,6 +4341,37 @@ namespace QuickFix
                 public bool IsSetLegRefID() 
                 { 
                     return IsSetField(Tags.LegRefID);
+                }
+                public QuickFix.Fields.LinkExecID LinkExecID
+                { 
+                    get 
+                    {
+                        QuickFix.Fields.LinkExecID val = new QuickFix.Fields.LinkExecID();
+                        GetField(val);
+                        return val;
+                    }
+                    set { SetField(value); }
+                }
+                
+                public void Set(QuickFix.Fields.LinkExecID val) 
+                { 
+                    this.LinkExecID = val;
+                }
+                
+                public QuickFix.Fields.LinkExecID Get(QuickFix.Fields.LinkExecID val) 
+                { 
+                    GetField(val);
+                    return val;
+                }
+                
+                public bool IsSet(QuickFix.Fields.LinkExecID val) 
+                { 
+                    return IsSetLinkExecID();
+                }
+                
+                public bool IsSetLinkExecID() 
+                { 
+                    return IsSetField(Tags.LinkExecID);
                 }
                 public QuickFix.Fields.LegPrice LegPrice
                 { 

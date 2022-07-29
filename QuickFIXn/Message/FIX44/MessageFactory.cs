@@ -102,6 +102,7 @@ namespace QuickFix
                     case QuickFix.FIX44.NetworkStatusRequest.MsgType: return new QuickFix.FIX44.NetworkStatusRequest();
                     case QuickFix.FIX44.NetworkStatusResponse.MsgType: return new QuickFix.FIX44.NetworkStatusResponse();
                     case QuickFix.FIX44.CollateralInquiryAck.MsgType: return new QuickFix.FIX44.CollateralInquiryAck();
+                    case QuickFix.FIX44.DefinedStrategy.MsgType: return new QuickFix.FIX44.DefinedStrategy();
                 }
 
                 return new QuickFix.Message();
@@ -129,6 +130,7 @@ namespace QuickFix
                         case QuickFix.Fields.Tags.NoUnderlyings: return new QuickFix.FIX44.Advertisement.NoUnderlyingsGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingSecurityAltID: return new QuickFix.FIX44.Advertisement.NoUnderlyingsGroup.NoUnderlyingSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingStips: return new QuickFix.FIX44.Advertisement.NoUnderlyingsGroup.NoUnderlyingStipsGroup();
+                        case QuickFix.Fields.Tags.NoBlockDetails: return new QuickFix.FIX44.Advertisement.NoUnderlyingsGroup.NoBlockDetailsGroup();
                     }
                 }
 
@@ -141,6 +143,7 @@ namespace QuickFix
                         case QuickFix.Fields.Tags.NoUnderlyings: return new QuickFix.FIX44.IndicationOfInterest.NoUnderlyingsGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingSecurityAltID: return new QuickFix.FIX44.IndicationOfInterest.NoUnderlyingsGroup.NoUnderlyingSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingStips: return new QuickFix.FIX44.IndicationOfInterest.NoUnderlyingsGroup.NoUnderlyingStipsGroup();
+                        case QuickFix.Fields.Tags.NoBlockDetails: return new QuickFix.FIX44.IndicationOfInterest.NoUnderlyingsGroup.NoBlockDetailsGroup();
                         case QuickFix.Fields.Tags.NoStipulations: return new QuickFix.FIX44.IndicationOfInterest.NoStipulationsGroup();
                         case QuickFix.Fields.Tags.NoLegs: return new QuickFix.FIX44.IndicationOfInterest.NoLegsGroup();
                         case QuickFix.Fields.Tags.NoLegSecurityAltID: return new QuickFix.FIX44.IndicationOfInterest.NoLegsGroup.NoLegSecurityAltIDGroup();
@@ -163,6 +166,7 @@ namespace QuickFix
                         case QuickFix.Fields.Tags.NoUnderlyings: return new QuickFix.FIX44.News.NoUnderlyingsGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingSecurityAltID: return new QuickFix.FIX44.News.NoUnderlyingsGroup.NoUnderlyingSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingStips: return new QuickFix.FIX44.News.NoUnderlyingsGroup.NoUnderlyingStipsGroup();
+                        case QuickFix.Fields.Tags.NoBlockDetails: return new QuickFix.FIX44.News.NoUnderlyingsGroup.NoBlockDetailsGroup();
                         case QuickFix.Fields.Tags.LinesOfText: return new QuickFix.FIX44.News.LinesOfTextGroup();
                     }
                 }
@@ -178,6 +182,7 @@ namespace QuickFix
                         case QuickFix.Fields.Tags.NoUnderlyings: return new QuickFix.FIX44.Email.NoUnderlyingsGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingSecurityAltID: return new QuickFix.FIX44.Email.NoUnderlyingsGroup.NoUnderlyingSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingStips: return new QuickFix.FIX44.Email.NoUnderlyingsGroup.NoUnderlyingStipsGroup();
+                        case QuickFix.Fields.Tags.NoBlockDetails: return new QuickFix.FIX44.Email.NoUnderlyingsGroup.NoBlockDetailsGroup();
                         case QuickFix.Fields.Tags.NoLegs: return new QuickFix.FIX44.Email.NoLegsGroup();
                         case QuickFix.Fields.Tags.NoLegSecurityAltID: return new QuickFix.FIX44.Email.NoLegsGroup.NoLegSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.LinesOfText: return new QuickFix.FIX44.Email.LinesOfTextGroup();
@@ -194,6 +199,7 @@ namespace QuickFix
                         case QuickFix.Fields.Tags.NoUnderlyings: return new QuickFix.FIX44.QuoteRequest.NoRelatedSymGroup.NoUnderlyingsGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingSecurityAltID: return new QuickFix.FIX44.QuoteRequest.NoRelatedSymGroup.NoUnderlyingsGroup.NoUnderlyingSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingStips: return new QuickFix.FIX44.QuoteRequest.NoRelatedSymGroup.NoUnderlyingsGroup.NoUnderlyingStipsGroup();
+                        case QuickFix.Fields.Tags.NoBlockDetails: return new QuickFix.FIX44.QuoteRequest.NoRelatedSymGroup.NoUnderlyingsGroup.NoBlockDetailsGroup();
                         case QuickFix.Fields.Tags.NoStipulations: return new QuickFix.FIX44.QuoteRequest.NoRelatedSymGroup.NoStipulationsGroup();
                         case QuickFix.Fields.Tags.NoLegs: return new QuickFix.FIX44.QuoteRequest.NoRelatedSymGroup.NoLegsGroup();
                         case QuickFix.Fields.Tags.NoLegSecurityAltID: return new QuickFix.FIX44.QuoteRequest.NoRelatedSymGroup.NoLegsGroup.NoLegSecurityAltIDGroup();
@@ -218,6 +224,7 @@ namespace QuickFix
                         case QuickFix.Fields.Tags.NoUnderlyings: return new QuickFix.FIX44.QuoteResponse.NoUnderlyingsGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingSecurityAltID: return new QuickFix.FIX44.QuoteResponse.NoUnderlyingsGroup.NoUnderlyingSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingStips: return new QuickFix.FIX44.QuoteResponse.NoUnderlyingsGroup.NoUnderlyingStipsGroup();
+                        case QuickFix.Fields.Tags.NoBlockDetails: return new QuickFix.FIX44.QuoteResponse.NoUnderlyingsGroup.NoBlockDetailsGroup();
                         case QuickFix.Fields.Tags.NoStipulations: return new QuickFix.FIX44.QuoteResponse.NoStipulationsGroup();
                         case QuickFix.Fields.Tags.NoLegs: return new QuickFix.FIX44.QuoteResponse.NoLegsGroup();
                         case QuickFix.Fields.Tags.NoLegSecurityAltID: return new QuickFix.FIX44.QuoteResponse.NoLegsGroup.NoLegSecurityAltIDGroup();
@@ -237,6 +244,7 @@ namespace QuickFix
                         case QuickFix.Fields.Tags.NoUnderlyings: return new QuickFix.FIX44.QuoteRequestReject.NoRelatedSymGroup.NoUnderlyingsGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingSecurityAltID: return new QuickFix.FIX44.QuoteRequestReject.NoRelatedSymGroup.NoUnderlyingsGroup.NoUnderlyingSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingStips: return new QuickFix.FIX44.QuoteRequestReject.NoRelatedSymGroup.NoUnderlyingsGroup.NoUnderlyingStipsGroup();
+                        case QuickFix.Fields.Tags.NoBlockDetails: return new QuickFix.FIX44.QuoteRequestReject.NoRelatedSymGroup.NoUnderlyingsGroup.NoBlockDetailsGroup();
                         case QuickFix.Fields.Tags.NoStipulations: return new QuickFix.FIX44.QuoteRequestReject.NoRelatedSymGroup.NoStipulationsGroup();
                         case QuickFix.Fields.Tags.NoLegs: return new QuickFix.FIX44.QuoteRequestReject.NoRelatedSymGroup.NoLegsGroup();
                         case QuickFix.Fields.Tags.NoLegSecurityAltID: return new QuickFix.FIX44.QuoteRequestReject.NoRelatedSymGroup.NoLegsGroup.NoLegSecurityAltIDGroup();
@@ -259,6 +267,7 @@ namespace QuickFix
                         case QuickFix.Fields.Tags.NoUnderlyings: return new QuickFix.FIX44.RFQRequest.NoRelatedSymGroup.NoUnderlyingsGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingSecurityAltID: return new QuickFix.FIX44.RFQRequest.NoRelatedSymGroup.NoUnderlyingsGroup.NoUnderlyingSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingStips: return new QuickFix.FIX44.RFQRequest.NoRelatedSymGroup.NoUnderlyingsGroup.NoUnderlyingStipsGroup();
+                        case QuickFix.Fields.Tags.NoBlockDetails: return new QuickFix.FIX44.RFQRequest.NoRelatedSymGroup.NoUnderlyingsGroup.NoBlockDetailsGroup();
                         case QuickFix.Fields.Tags.NoLegs: return new QuickFix.FIX44.RFQRequest.NoRelatedSymGroup.NoLegsGroup();
                         case QuickFix.Fields.Tags.NoLegSecurityAltID: return new QuickFix.FIX44.RFQRequest.NoRelatedSymGroup.NoLegsGroup.NoLegSecurityAltIDGroup();
                     }
@@ -276,6 +285,7 @@ namespace QuickFix
                         case QuickFix.Fields.Tags.NoUnderlyings: return new QuickFix.FIX44.Quote.NoUnderlyingsGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingSecurityAltID: return new QuickFix.FIX44.Quote.NoUnderlyingsGroup.NoUnderlyingSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingStips: return new QuickFix.FIX44.Quote.NoUnderlyingsGroup.NoUnderlyingStipsGroup();
+                        case QuickFix.Fields.Tags.NoBlockDetails: return new QuickFix.FIX44.Quote.NoUnderlyingsGroup.NoBlockDetailsGroup();
                         case QuickFix.Fields.Tags.NoStipulations: return new QuickFix.FIX44.Quote.NoStipulationsGroup();
                         case QuickFix.Fields.Tags.NoLegs: return new QuickFix.FIX44.Quote.NoLegsGroup();
                         case QuickFix.Fields.Tags.NoLegSecurityAltID: return new QuickFix.FIX44.Quote.NoLegsGroup.NoLegSecurityAltIDGroup();
@@ -297,6 +307,7 @@ namespace QuickFix
                         case QuickFix.Fields.Tags.NoUnderlyings: return new QuickFix.FIX44.QuoteCancel.NoQuoteEntriesGroup.NoUnderlyingsGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingSecurityAltID: return new QuickFix.FIX44.QuoteCancel.NoQuoteEntriesGroup.NoUnderlyingsGroup.NoUnderlyingSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingStips: return new QuickFix.FIX44.QuoteCancel.NoQuoteEntriesGroup.NoUnderlyingsGroup.NoUnderlyingStipsGroup();
+                        case QuickFix.Fields.Tags.NoBlockDetails: return new QuickFix.FIX44.QuoteCancel.NoQuoteEntriesGroup.NoUnderlyingsGroup.NoBlockDetailsGroup();
                         case QuickFix.Fields.Tags.NoLegs: return new QuickFix.FIX44.QuoteCancel.NoQuoteEntriesGroup.NoLegsGroup();
                         case QuickFix.Fields.Tags.NoLegSecurityAltID: return new QuickFix.FIX44.QuoteCancel.NoQuoteEntriesGroup.NoLegsGroup.NoLegSecurityAltIDGroup();
                     }
@@ -311,6 +322,7 @@ namespace QuickFix
                         case QuickFix.Fields.Tags.NoUnderlyings: return new QuickFix.FIX44.QuoteStatusRequest.NoUnderlyingsGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingSecurityAltID: return new QuickFix.FIX44.QuoteStatusRequest.NoUnderlyingsGroup.NoUnderlyingSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingStips: return new QuickFix.FIX44.QuoteStatusRequest.NoUnderlyingsGroup.NoUnderlyingStipsGroup();
+                        case QuickFix.Fields.Tags.NoBlockDetails: return new QuickFix.FIX44.QuoteStatusRequest.NoUnderlyingsGroup.NoBlockDetailsGroup();
                         case QuickFix.Fields.Tags.NoLegs: return new QuickFix.FIX44.QuoteStatusRequest.NoLegsGroup();
                         case QuickFix.Fields.Tags.NoLegSecurityAltID: return new QuickFix.FIX44.QuoteStatusRequest.NoLegsGroup.NoLegSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoPartyIDs: return new QuickFix.FIX44.QuoteStatusRequest.NoPartyIDsGroup();
@@ -329,6 +341,7 @@ namespace QuickFix
                         case QuickFix.Fields.Tags.NoUnderlyings: return new QuickFix.FIX44.QuoteStatusReport.NoUnderlyingsGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingSecurityAltID: return new QuickFix.FIX44.QuoteStatusReport.NoUnderlyingsGroup.NoUnderlyingSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingStips: return new QuickFix.FIX44.QuoteStatusReport.NoUnderlyingsGroup.NoUnderlyingStipsGroup();
+                        case QuickFix.Fields.Tags.NoBlockDetails: return new QuickFix.FIX44.QuoteStatusReport.NoUnderlyingsGroup.NoBlockDetailsGroup();
                         case QuickFix.Fields.Tags.NoStipulations: return new QuickFix.FIX44.QuoteStatusReport.NoStipulationsGroup();
                         case QuickFix.Fields.Tags.NoLegs: return new QuickFix.FIX44.QuoteStatusReport.NoLegsGroup();
                         case QuickFix.Fields.Tags.NoLegSecurityAltID: return new QuickFix.FIX44.QuoteStatusReport.NoLegsGroup.NoLegSecurityAltIDGroup();
@@ -348,6 +361,7 @@ namespace QuickFix
                         case QuickFix.Fields.Tags.NoQuoteSets: return new QuickFix.FIX44.MassQuote.NoQuoteSetsGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingSecurityAltID: return new QuickFix.FIX44.MassQuote.NoQuoteSetsGroup.NoUnderlyingSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingStips: return new QuickFix.FIX44.MassQuote.NoQuoteSetsGroup.NoUnderlyingStipsGroup();
+                        case QuickFix.Fields.Tags.NoBlockDetails: return new QuickFix.FIX44.MassQuote.NoQuoteSetsGroup.NoBlockDetailsGroup();
                         case QuickFix.Fields.Tags.NoQuoteEntries: return new QuickFix.FIX44.MassQuote.NoQuoteSetsGroup.NoQuoteEntriesGroup();
                         case QuickFix.Fields.Tags.NoSecurityAltID: return new QuickFix.FIX44.MassQuote.NoQuoteSetsGroup.NoQuoteEntriesGroup.NoSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoEvents: return new QuickFix.FIX44.MassQuote.NoQuoteSetsGroup.NoQuoteEntriesGroup.NoEventsGroup();
@@ -365,6 +379,7 @@ namespace QuickFix
                         case QuickFix.Fields.Tags.NoQuoteSets: return new QuickFix.FIX44.MassQuoteAcknowledgement.NoQuoteSetsGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingSecurityAltID: return new QuickFix.FIX44.MassQuoteAcknowledgement.NoQuoteSetsGroup.NoUnderlyingSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingStips: return new QuickFix.FIX44.MassQuoteAcknowledgement.NoQuoteSetsGroup.NoUnderlyingStipsGroup();
+                        case QuickFix.Fields.Tags.NoBlockDetails: return new QuickFix.FIX44.MassQuoteAcknowledgement.NoQuoteSetsGroup.NoBlockDetailsGroup();
                         case QuickFix.Fields.Tags.NoQuoteEntries: return new QuickFix.FIX44.MassQuoteAcknowledgement.NoQuoteSetsGroup.NoQuoteEntriesGroup();
                         case QuickFix.Fields.Tags.NoSecurityAltID: return new QuickFix.FIX44.MassQuoteAcknowledgement.NoQuoteSetsGroup.NoQuoteEntriesGroup.NoSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoEvents: return new QuickFix.FIX44.MassQuoteAcknowledgement.NoQuoteSetsGroup.NoQuoteEntriesGroup.NoEventsGroup();
@@ -384,6 +399,7 @@ namespace QuickFix
                         case QuickFix.Fields.Tags.NoUnderlyings: return new QuickFix.FIX44.MarketDataRequest.NoRelatedSymGroup.NoUnderlyingsGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingSecurityAltID: return new QuickFix.FIX44.MarketDataRequest.NoRelatedSymGroup.NoUnderlyingsGroup.NoUnderlyingSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingStips: return new QuickFix.FIX44.MarketDataRequest.NoRelatedSymGroup.NoUnderlyingsGroup.NoUnderlyingStipsGroup();
+                        case QuickFix.Fields.Tags.NoBlockDetails: return new QuickFix.FIX44.MarketDataRequest.NoRelatedSymGroup.NoUnderlyingsGroup.NoBlockDetailsGroup();
                         case QuickFix.Fields.Tags.NoLegs: return new QuickFix.FIX44.MarketDataRequest.NoRelatedSymGroup.NoLegsGroup();
                         case QuickFix.Fields.Tags.NoLegSecurityAltID: return new QuickFix.FIX44.MarketDataRequest.NoRelatedSymGroup.NoLegsGroup.NoLegSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoTradingSessions: return new QuickFix.FIX44.MarketDataRequest.NoTradingSessionsGroup();
@@ -399,6 +415,7 @@ namespace QuickFix
                         case QuickFix.Fields.Tags.NoUnderlyings: return new QuickFix.FIX44.MarketDataSnapshotFullRefresh.NoUnderlyingsGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingSecurityAltID: return new QuickFix.FIX44.MarketDataSnapshotFullRefresh.NoUnderlyingsGroup.NoUnderlyingSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingStips: return new QuickFix.FIX44.MarketDataSnapshotFullRefresh.NoUnderlyingsGroup.NoUnderlyingStipsGroup();
+                        case QuickFix.Fields.Tags.NoBlockDetails: return new QuickFix.FIX44.MarketDataSnapshotFullRefresh.NoUnderlyingsGroup.NoBlockDetailsGroup();
                         case QuickFix.Fields.Tags.NoLegs: return new QuickFix.FIX44.MarketDataSnapshotFullRefresh.NoLegsGroup();
                         case QuickFix.Fields.Tags.NoLegSecurityAltID: return new QuickFix.FIX44.MarketDataSnapshotFullRefresh.NoLegsGroup.NoLegSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoMDEntries: return new QuickFix.FIX44.MarketDataSnapshotFullRefresh.NoMDEntriesGroup();
@@ -415,6 +432,7 @@ namespace QuickFix
                         case QuickFix.Fields.Tags.NoUnderlyings: return new QuickFix.FIX44.MarketDataIncrementalRefresh.NoMDEntriesGroup.NoUnderlyingsGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingSecurityAltID: return new QuickFix.FIX44.MarketDataIncrementalRefresh.NoMDEntriesGroup.NoUnderlyingsGroup.NoUnderlyingSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingStips: return new QuickFix.FIX44.MarketDataIncrementalRefresh.NoMDEntriesGroup.NoUnderlyingsGroup.NoUnderlyingStipsGroup();
+                        case QuickFix.Fields.Tags.NoBlockDetails: return new QuickFix.FIX44.MarketDataIncrementalRefresh.NoMDEntriesGroup.NoUnderlyingsGroup.NoBlockDetailsGroup();
                         case QuickFix.Fields.Tags.NoLegs: return new QuickFix.FIX44.MarketDataIncrementalRefresh.NoMDEntriesGroup.NoLegsGroup();
                         case QuickFix.Fields.Tags.NoLegSecurityAltID: return new QuickFix.FIX44.MarketDataIncrementalRefresh.NoMDEntriesGroup.NoLegsGroup.NoLegSecurityAltIDGroup();
                     }
@@ -438,6 +456,7 @@ namespace QuickFix
                         case QuickFix.Fields.Tags.NoUnderlyings: return new QuickFix.FIX44.SecurityDefinitionRequest.NoUnderlyingsGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingSecurityAltID: return new QuickFix.FIX44.SecurityDefinitionRequest.NoUnderlyingsGroup.NoUnderlyingSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingStips: return new QuickFix.FIX44.SecurityDefinitionRequest.NoUnderlyingsGroup.NoUnderlyingStipsGroup();
+                        case QuickFix.Fields.Tags.NoBlockDetails: return new QuickFix.FIX44.SecurityDefinitionRequest.NoUnderlyingsGroup.NoBlockDetailsGroup();
                         case QuickFix.Fields.Tags.NoLegs: return new QuickFix.FIX44.SecurityDefinitionRequest.NoLegsGroup();
                         case QuickFix.Fields.Tags.NoLegSecurityAltID: return new QuickFix.FIX44.SecurityDefinitionRequest.NoLegsGroup.NoLegSecurityAltIDGroup();
                     }
@@ -453,6 +472,7 @@ namespace QuickFix
                         case QuickFix.Fields.Tags.NoUnderlyings: return new QuickFix.FIX44.SecurityDefinition.NoUnderlyingsGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingSecurityAltID: return new QuickFix.FIX44.SecurityDefinition.NoUnderlyingsGroup.NoUnderlyingSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingStips: return new QuickFix.FIX44.SecurityDefinition.NoUnderlyingsGroup.NoUnderlyingStipsGroup();
+                        case QuickFix.Fields.Tags.NoBlockDetails: return new QuickFix.FIX44.SecurityDefinition.NoUnderlyingsGroup.NoBlockDetailsGroup();
                         case QuickFix.Fields.Tags.NoLegs: return new QuickFix.FIX44.SecurityDefinition.NoLegsGroup();
                         case QuickFix.Fields.Tags.NoLegSecurityAltID: return new QuickFix.FIX44.SecurityDefinition.NoLegsGroup.NoLegSecurityAltIDGroup();
                     }
@@ -476,6 +496,7 @@ namespace QuickFix
                         case QuickFix.Fields.Tags.NoUnderlyings: return new QuickFix.FIX44.SecurityListRequest.NoUnderlyingsGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingSecurityAltID: return new QuickFix.FIX44.SecurityListRequest.NoUnderlyingsGroup.NoUnderlyingSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingStips: return new QuickFix.FIX44.SecurityListRequest.NoUnderlyingsGroup.NoUnderlyingStipsGroup();
+                        case QuickFix.Fields.Tags.NoBlockDetails: return new QuickFix.FIX44.SecurityListRequest.NoUnderlyingsGroup.NoBlockDetailsGroup();
                         case QuickFix.Fields.Tags.NoLegs: return new QuickFix.FIX44.SecurityListRequest.NoLegsGroup();
                         case QuickFix.Fields.Tags.NoLegSecurityAltID: return new QuickFix.FIX44.SecurityListRequest.NoLegsGroup.NoLegSecurityAltIDGroup();
                     }
@@ -492,6 +513,7 @@ namespace QuickFix
                         case QuickFix.Fields.Tags.NoUnderlyings: return new QuickFix.FIX44.SecurityList.NoRelatedSymGroup.NoUnderlyingsGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingSecurityAltID: return new QuickFix.FIX44.SecurityList.NoRelatedSymGroup.NoUnderlyingsGroup.NoUnderlyingSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingStips: return new QuickFix.FIX44.SecurityList.NoRelatedSymGroup.NoUnderlyingsGroup.NoUnderlyingStipsGroup();
+                        case QuickFix.Fields.Tags.NoBlockDetails: return new QuickFix.FIX44.SecurityList.NoRelatedSymGroup.NoUnderlyingsGroup.NoBlockDetailsGroup();
                         case QuickFix.Fields.Tags.NoStipulations: return new QuickFix.FIX44.SecurityList.NoRelatedSymGroup.NoStipulationsGroup();
                         case QuickFix.Fields.Tags.NoLegs: return new QuickFix.FIX44.SecurityList.NoRelatedSymGroup.NoLegsGroup();
                         case QuickFix.Fields.Tags.NoLegSecurityAltID: return new QuickFix.FIX44.SecurityList.NoRelatedSymGroup.NoLegsGroup.NoLegSecurityAltIDGroup();
@@ -505,6 +527,7 @@ namespace QuickFix
                     {
                         case QuickFix.Fields.Tags.NoUnderlyingSecurityAltID: return new QuickFix.FIX44.DerivativeSecurityListRequest.NoUnderlyingSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingStips: return new QuickFix.FIX44.DerivativeSecurityListRequest.NoUnderlyingStipsGroup();
+                        case QuickFix.Fields.Tags.NoBlockDetails: return new QuickFix.FIX44.DerivativeSecurityListRequest.NoBlockDetailsGroup();
                     }
                 }
 
@@ -514,6 +537,7 @@ namespace QuickFix
                     {
                         case QuickFix.Fields.Tags.NoUnderlyingSecurityAltID: return new QuickFix.FIX44.DerivativeSecurityList.NoUnderlyingSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingStips: return new QuickFix.FIX44.DerivativeSecurityList.NoUnderlyingStipsGroup();
+                        case QuickFix.Fields.Tags.NoBlockDetails: return new QuickFix.FIX44.DerivativeSecurityList.NoBlockDetailsGroup();
                         case QuickFix.Fields.Tags.NoRelatedSym: return new QuickFix.FIX44.DerivativeSecurityList.NoRelatedSymGroup();
                         case QuickFix.Fields.Tags.NoSecurityAltID: return new QuickFix.FIX44.DerivativeSecurityList.NoRelatedSymGroup.NoSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoEvents: return new QuickFix.FIX44.DerivativeSecurityList.NoRelatedSymGroup.NoEventsGroup();
@@ -533,6 +557,7 @@ namespace QuickFix
                         case QuickFix.Fields.Tags.NoUnderlyings: return new QuickFix.FIX44.SecurityStatusRequest.NoUnderlyingsGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingSecurityAltID: return new QuickFix.FIX44.SecurityStatusRequest.NoUnderlyingsGroup.NoUnderlyingSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingStips: return new QuickFix.FIX44.SecurityStatusRequest.NoUnderlyingsGroup.NoUnderlyingStipsGroup();
+                        case QuickFix.Fields.Tags.NoBlockDetails: return new QuickFix.FIX44.SecurityStatusRequest.NoUnderlyingsGroup.NoBlockDetailsGroup();
                         case QuickFix.Fields.Tags.NoLegs: return new QuickFix.FIX44.SecurityStatusRequest.NoLegsGroup();
                         case QuickFix.Fields.Tags.NoLegSecurityAltID: return new QuickFix.FIX44.SecurityStatusRequest.NoLegsGroup.NoLegSecurityAltIDGroup();
                     }
@@ -548,6 +573,7 @@ namespace QuickFix
                         case QuickFix.Fields.Tags.NoUnderlyings: return new QuickFix.FIX44.SecurityStatus.NoUnderlyingsGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingSecurityAltID: return new QuickFix.FIX44.SecurityStatus.NoUnderlyingsGroup.NoUnderlyingSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingStips: return new QuickFix.FIX44.SecurityStatus.NoUnderlyingsGroup.NoUnderlyingStipsGroup();
+                        case QuickFix.Fields.Tags.NoBlockDetails: return new QuickFix.FIX44.SecurityStatus.NoUnderlyingsGroup.NoBlockDetailsGroup();
                         case QuickFix.Fields.Tags.NoLegs: return new QuickFix.FIX44.SecurityStatus.NoLegsGroup();
                         case QuickFix.Fields.Tags.NoLegSecurityAltID: return new QuickFix.FIX44.SecurityStatus.NoLegsGroup.NoLegSecurityAltIDGroup();
                     }
@@ -568,6 +594,7 @@ namespace QuickFix
                         case QuickFix.Fields.Tags.NoUnderlyings: return new QuickFix.FIX44.NewOrderSingle.NoUnderlyingsGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingSecurityAltID: return new QuickFix.FIX44.NewOrderSingle.NoUnderlyingsGroup.NoUnderlyingSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingStips: return new QuickFix.FIX44.NewOrderSingle.NoUnderlyingsGroup.NoUnderlyingStipsGroup();
+                        case QuickFix.Fields.Tags.NoBlockDetails: return new QuickFix.FIX44.NewOrderSingle.NoUnderlyingsGroup.NoBlockDetailsGroup();
                         case QuickFix.Fields.Tags.NoStipulations: return new QuickFix.FIX44.NewOrderSingle.NoStipulationsGroup();
                     }
                 }
@@ -584,6 +611,7 @@ namespace QuickFix
                         case QuickFix.Fields.Tags.NoUnderlyings: return new QuickFix.FIX44.ExecutionReport.NoUnderlyingsGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingSecurityAltID: return new QuickFix.FIX44.ExecutionReport.NoUnderlyingsGroup.NoUnderlyingSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingStips: return new QuickFix.FIX44.ExecutionReport.NoUnderlyingsGroup.NoUnderlyingStipsGroup();
+                        case QuickFix.Fields.Tags.NoBlockDetails: return new QuickFix.FIX44.ExecutionReport.NoUnderlyingsGroup.NoBlockDetailsGroup();
                         case QuickFix.Fields.Tags.NoStipulations: return new QuickFix.FIX44.ExecutionReport.NoStipulationsGroup();
                         case QuickFix.Fields.Tags.NoContAmts: return new QuickFix.FIX44.ExecutionReport.NoContAmtsGroup();
                         case QuickFix.Fields.Tags.NoLegs: return new QuickFix.FIX44.ExecutionReport.NoLegsGroup();
@@ -604,6 +632,7 @@ namespace QuickFix
                         case QuickFix.Fields.Tags.NoUnderlyings: return new QuickFix.FIX44.DontKnowTrade.NoUnderlyingsGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingSecurityAltID: return new QuickFix.FIX44.DontKnowTrade.NoUnderlyingsGroup.NoUnderlyingSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingStips: return new QuickFix.FIX44.DontKnowTrade.NoUnderlyingsGroup.NoUnderlyingStipsGroup();
+                        case QuickFix.Fields.Tags.NoBlockDetails: return new QuickFix.FIX44.DontKnowTrade.NoUnderlyingsGroup.NoBlockDetailsGroup();
                         case QuickFix.Fields.Tags.NoLegs: return new QuickFix.FIX44.DontKnowTrade.NoLegsGroup();
                         case QuickFix.Fields.Tags.NoLegSecurityAltID: return new QuickFix.FIX44.DontKnowTrade.NoLegsGroup.NoLegSecurityAltIDGroup();
                     }
@@ -624,6 +653,7 @@ namespace QuickFix
                         case QuickFix.Fields.Tags.NoUnderlyings: return new QuickFix.FIX44.OrderCancelReplaceRequest.NoUnderlyingsGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingSecurityAltID: return new QuickFix.FIX44.OrderCancelReplaceRequest.NoUnderlyingsGroup.NoUnderlyingSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingStips: return new QuickFix.FIX44.OrderCancelReplaceRequest.NoUnderlyingsGroup.NoUnderlyingStipsGroup();
+                        case QuickFix.Fields.Tags.NoBlockDetails: return new QuickFix.FIX44.OrderCancelReplaceRequest.NoUnderlyingsGroup.NoBlockDetailsGroup();
                     }
                 }
 
@@ -638,6 +668,7 @@ namespace QuickFix
                         case QuickFix.Fields.Tags.NoUnderlyings: return new QuickFix.FIX44.OrderCancelRequest.NoUnderlyingsGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingSecurityAltID: return new QuickFix.FIX44.OrderCancelRequest.NoUnderlyingsGroup.NoUnderlyingSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingStips: return new QuickFix.FIX44.OrderCancelRequest.NoUnderlyingsGroup.NoUnderlyingStipsGroup();
+                        case QuickFix.Fields.Tags.NoBlockDetails: return new QuickFix.FIX44.OrderCancelRequest.NoUnderlyingsGroup.NoBlockDetailsGroup();
                     }
                 }
 
@@ -652,6 +683,7 @@ namespace QuickFix
                         case QuickFix.Fields.Tags.NoUnderlyings: return new QuickFix.FIX44.OrderStatusRequest.NoUnderlyingsGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingSecurityAltID: return new QuickFix.FIX44.OrderStatusRequest.NoUnderlyingsGroup.NoUnderlyingSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingStips: return new QuickFix.FIX44.OrderStatusRequest.NoUnderlyingsGroup.NoUnderlyingStipsGroup();
+                        case QuickFix.Fields.Tags.NoBlockDetails: return new QuickFix.FIX44.OrderStatusRequest.NoUnderlyingsGroup.NoBlockDetailsGroup();
                     }
                 }
 
@@ -663,6 +695,7 @@ namespace QuickFix
                         case QuickFix.Fields.Tags.NoEvents: return new QuickFix.FIX44.OrderMassCancelRequest.NoEventsGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingSecurityAltID: return new QuickFix.FIX44.OrderMassCancelRequest.NoUnderlyingSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingStips: return new QuickFix.FIX44.OrderMassCancelRequest.NoUnderlyingStipsGroup();
+                        case QuickFix.Fields.Tags.NoBlockDetails: return new QuickFix.FIX44.OrderMassCancelRequest.NoBlockDetailsGroup();
                     }
                 }
 
@@ -675,6 +708,7 @@ namespace QuickFix
                         case QuickFix.Fields.Tags.NoEvents: return new QuickFix.FIX44.OrderMassCancelReport.NoEventsGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingSecurityAltID: return new QuickFix.FIX44.OrderMassCancelReport.NoUnderlyingSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingStips: return new QuickFix.FIX44.OrderMassCancelReport.NoUnderlyingStipsGroup();
+                        case QuickFix.Fields.Tags.NoBlockDetails: return new QuickFix.FIX44.OrderMassCancelReport.NoBlockDetailsGroup();
                     }
                 }
 
@@ -688,6 +722,7 @@ namespace QuickFix
                         case QuickFix.Fields.Tags.NoEvents: return new QuickFix.FIX44.OrderMassStatusRequest.NoEventsGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingSecurityAltID: return new QuickFix.FIX44.OrderMassStatusRequest.NoUnderlyingSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingStips: return new QuickFix.FIX44.OrderMassStatusRequest.NoUnderlyingStipsGroup();
+                        case QuickFix.Fields.Tags.NoBlockDetails: return new QuickFix.FIX44.OrderMassStatusRequest.NoBlockDetailsGroup();
                     }
                 }
 
@@ -706,6 +741,7 @@ namespace QuickFix
                         case QuickFix.Fields.Tags.NoUnderlyings: return new QuickFix.FIX44.NewOrderCross.NoUnderlyingsGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingSecurityAltID: return new QuickFix.FIX44.NewOrderCross.NoUnderlyingsGroup.NoUnderlyingSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingStips: return new QuickFix.FIX44.NewOrderCross.NoUnderlyingsGroup.NoUnderlyingStipsGroup();
+                        case QuickFix.Fields.Tags.NoBlockDetails: return new QuickFix.FIX44.NewOrderCross.NoUnderlyingsGroup.NoBlockDetailsGroup();
                         case QuickFix.Fields.Tags.NoLegs: return new QuickFix.FIX44.NewOrderCross.NoLegsGroup();
                         case QuickFix.Fields.Tags.NoLegSecurityAltID: return new QuickFix.FIX44.NewOrderCross.NoLegsGroup.NoLegSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoTradingSessions: return new QuickFix.FIX44.NewOrderCross.NoTradingSessionsGroup();
@@ -728,6 +764,7 @@ namespace QuickFix
                         case QuickFix.Fields.Tags.NoUnderlyings: return new QuickFix.FIX44.CrossOrderCancelReplaceRequest.NoUnderlyingsGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingSecurityAltID: return new QuickFix.FIX44.CrossOrderCancelReplaceRequest.NoUnderlyingsGroup.NoUnderlyingSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingStips: return new QuickFix.FIX44.CrossOrderCancelReplaceRequest.NoUnderlyingsGroup.NoUnderlyingStipsGroup();
+                        case QuickFix.Fields.Tags.NoBlockDetails: return new QuickFix.FIX44.CrossOrderCancelReplaceRequest.NoUnderlyingsGroup.NoBlockDetailsGroup();
                         case QuickFix.Fields.Tags.NoLegs: return new QuickFix.FIX44.CrossOrderCancelReplaceRequest.NoLegsGroup();
                         case QuickFix.Fields.Tags.NoLegSecurityAltID: return new QuickFix.FIX44.CrossOrderCancelReplaceRequest.NoLegsGroup.NoLegSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoTradingSessions: return new QuickFix.FIX44.CrossOrderCancelReplaceRequest.NoTradingSessionsGroup();
@@ -747,6 +784,7 @@ namespace QuickFix
                         case QuickFix.Fields.Tags.NoUnderlyings: return new QuickFix.FIX44.CrossOrderCancelRequest.NoUnderlyingsGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingSecurityAltID: return new QuickFix.FIX44.CrossOrderCancelRequest.NoUnderlyingsGroup.NoUnderlyingSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingStips: return new QuickFix.FIX44.CrossOrderCancelRequest.NoUnderlyingsGroup.NoUnderlyingStipsGroup();
+                        case QuickFix.Fields.Tags.NoBlockDetails: return new QuickFix.FIX44.CrossOrderCancelRequest.NoUnderlyingsGroup.NoBlockDetailsGroup();
                         case QuickFix.Fields.Tags.NoLegs: return new QuickFix.FIX44.CrossOrderCancelRequest.NoLegsGroup();
                         case QuickFix.Fields.Tags.NoLegSecurityAltID: return new QuickFix.FIX44.CrossOrderCancelRequest.NoLegsGroup.NoLegSecurityAltIDGroup();
                     }
@@ -767,6 +805,7 @@ namespace QuickFix
                         case QuickFix.Fields.Tags.NoUnderlyings: return new QuickFix.FIX44.NewOrderMultileg.NoUnderlyingsGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingSecurityAltID: return new QuickFix.FIX44.NewOrderMultileg.NoUnderlyingsGroup.NoUnderlyingSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingStips: return new QuickFix.FIX44.NewOrderMultileg.NoUnderlyingsGroup.NoUnderlyingStipsGroup();
+                        case QuickFix.Fields.Tags.NoBlockDetails: return new QuickFix.FIX44.NewOrderMultileg.NoUnderlyingsGroup.NoBlockDetailsGroup();
                         case QuickFix.Fields.Tags.NoLegs: return new QuickFix.FIX44.NewOrderMultileg.NoLegsGroup();
                         case QuickFix.Fields.Tags.NoLegSecurityAltID: return new QuickFix.FIX44.NewOrderMultileg.NoLegsGroup.NoLegSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoLegStipulations: return new QuickFix.FIX44.NewOrderMultileg.NoLegsGroup.NoLegStipulationsGroup();
@@ -793,6 +832,7 @@ namespace QuickFix
                         case QuickFix.Fields.Tags.NoUnderlyings: return new QuickFix.FIX44.MultilegOrderCancelReplaceRequest.NoUnderlyingsGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingSecurityAltID: return new QuickFix.FIX44.MultilegOrderCancelReplaceRequest.NoUnderlyingsGroup.NoUnderlyingSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingStips: return new QuickFix.FIX44.MultilegOrderCancelReplaceRequest.NoUnderlyingsGroup.NoUnderlyingStipsGroup();
+                        case QuickFix.Fields.Tags.NoBlockDetails: return new QuickFix.FIX44.MultilegOrderCancelReplaceRequest.NoUnderlyingsGroup.NoBlockDetailsGroup();
                         case QuickFix.Fields.Tags.NoLegs: return new QuickFix.FIX44.MultilegOrderCancelReplaceRequest.NoLegsGroup();
                         case QuickFix.Fields.Tags.NoLegSecurityAltID: return new QuickFix.FIX44.MultilegOrderCancelReplaceRequest.NoLegsGroup.NoLegSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoLegStipulations: return new QuickFix.FIX44.MultilegOrderCancelReplaceRequest.NoLegsGroup.NoLegStipulationsGroup();
@@ -837,6 +877,7 @@ namespace QuickFix
                         case QuickFix.Fields.Tags.NoUnderlyings: return new QuickFix.FIX44.NewOrderList.NoOrdersGroup.NoUnderlyingsGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingSecurityAltID: return new QuickFix.FIX44.NewOrderList.NoOrdersGroup.NoUnderlyingsGroup.NoUnderlyingSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingStips: return new QuickFix.FIX44.NewOrderList.NoOrdersGroup.NoUnderlyingsGroup.NoUnderlyingStipsGroup();
+                        case QuickFix.Fields.Tags.NoBlockDetails: return new QuickFix.FIX44.NewOrderList.NoOrdersGroup.NoUnderlyingsGroup.NoBlockDetailsGroup();
                         case QuickFix.Fields.Tags.NoStipulations: return new QuickFix.FIX44.NewOrderList.NoOrdersGroup.NoStipulationsGroup();
                     }
                 }
@@ -851,6 +892,7 @@ namespace QuickFix
                         case QuickFix.Fields.Tags.NoUnderlyings: return new QuickFix.FIX44.ListStrikePrice.NoUnderlyingsGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingSecurityAltID: return new QuickFix.FIX44.ListStrikePrice.NoUnderlyingsGroup.NoUnderlyingSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingStips: return new QuickFix.FIX44.ListStrikePrice.NoUnderlyingsGroup.NoUnderlyingStipsGroup();
+                        case QuickFix.Fields.Tags.NoBlockDetails: return new QuickFix.FIX44.ListStrikePrice.NoUnderlyingsGroup.NoBlockDetailsGroup();
                     }
                 }
 
@@ -876,6 +918,7 @@ namespace QuickFix
                         case QuickFix.Fields.Tags.NoUnderlyings: return new QuickFix.FIX44.AllocationInstruction.NoUnderlyingsGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingSecurityAltID: return new QuickFix.FIX44.AllocationInstruction.NoUnderlyingsGroup.NoUnderlyingSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingStips: return new QuickFix.FIX44.AllocationInstruction.NoUnderlyingsGroup.NoUnderlyingStipsGroup();
+                        case QuickFix.Fields.Tags.NoBlockDetails: return new QuickFix.FIX44.AllocationInstruction.NoUnderlyingsGroup.NoBlockDetailsGroup();
                         case QuickFix.Fields.Tags.NoLegs: return new QuickFix.FIX44.AllocationInstruction.NoLegsGroup();
                         case QuickFix.Fields.Tags.NoLegSecurityAltID: return new QuickFix.FIX44.AllocationInstruction.NoLegsGroup.NoLegSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoPartyIDs: return new QuickFix.FIX44.AllocationInstruction.NoPartyIDsGroup();
@@ -915,6 +958,7 @@ namespace QuickFix
                         case QuickFix.Fields.Tags.NoUnderlyings: return new QuickFix.FIX44.AllocationReport.NoUnderlyingsGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingSecurityAltID: return new QuickFix.FIX44.AllocationReport.NoUnderlyingsGroup.NoUnderlyingSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingStips: return new QuickFix.FIX44.AllocationReport.NoUnderlyingsGroup.NoUnderlyingStipsGroup();
+                        case QuickFix.Fields.Tags.NoBlockDetails: return new QuickFix.FIX44.AllocationReport.NoUnderlyingsGroup.NoBlockDetailsGroup();
                         case QuickFix.Fields.Tags.NoLegs: return new QuickFix.FIX44.AllocationReport.NoLegsGroup();
                         case QuickFix.Fields.Tags.NoLegSecurityAltID: return new QuickFix.FIX44.AllocationReport.NoLegsGroup.NoLegSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoPartyIDs: return new QuickFix.FIX44.AllocationReport.NoPartyIDsGroup();
@@ -957,6 +1001,7 @@ namespace QuickFix
                         case QuickFix.Fields.Tags.NoUnderlyings: return new QuickFix.FIX44.Confirmation.NoUnderlyingsGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingSecurityAltID: return new QuickFix.FIX44.Confirmation.NoUnderlyingsGroup.NoUnderlyingSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingStips: return new QuickFix.FIX44.Confirmation.NoUnderlyingsGroup.NoUnderlyingStipsGroup();
+                        case QuickFix.Fields.Tags.NoBlockDetails: return new QuickFix.FIX44.Confirmation.NoUnderlyingsGroup.NoBlockDetailsGroup();
                         case QuickFix.Fields.Tags.NoLegs: return new QuickFix.FIX44.Confirmation.NoLegsGroup();
                         case QuickFix.Fields.Tags.NoLegSecurityAltID: return new QuickFix.FIX44.Confirmation.NoLegsGroup.NoLegSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoCapacities: return new QuickFix.FIX44.Confirmation.NoCapacitiesGroup();
@@ -1012,6 +1057,7 @@ namespace QuickFix
                         case QuickFix.Fields.Tags.NoUnderlyings: return new QuickFix.FIX44.TradeCaptureReportRequest.NoUnderlyingsGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingSecurityAltID: return new QuickFix.FIX44.TradeCaptureReportRequest.NoUnderlyingsGroup.NoUnderlyingSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingStips: return new QuickFix.FIX44.TradeCaptureReportRequest.NoUnderlyingsGroup.NoUnderlyingStipsGroup();
+                        case QuickFix.Fields.Tags.NoBlockDetails: return new QuickFix.FIX44.TradeCaptureReportRequest.NoUnderlyingsGroup.NoBlockDetailsGroup();
                         case QuickFix.Fields.Tags.NoLegs: return new QuickFix.FIX44.TradeCaptureReportRequest.NoLegsGroup();
                         case QuickFix.Fields.Tags.NoLegSecurityAltID: return new QuickFix.FIX44.TradeCaptureReportRequest.NoLegsGroup.NoLegSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoDates: return new QuickFix.FIX44.TradeCaptureReportRequest.NoDatesGroup();
@@ -1027,6 +1073,7 @@ namespace QuickFix
                         case QuickFix.Fields.Tags.NoUnderlyings: return new QuickFix.FIX44.TradeCaptureReportRequestAck.NoUnderlyingsGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingSecurityAltID: return new QuickFix.FIX44.TradeCaptureReportRequestAck.NoUnderlyingsGroup.NoUnderlyingSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingStips: return new QuickFix.FIX44.TradeCaptureReportRequestAck.NoUnderlyingsGroup.NoUnderlyingStipsGroup();
+                        case QuickFix.Fields.Tags.NoBlockDetails: return new QuickFix.FIX44.TradeCaptureReportRequestAck.NoUnderlyingsGroup.NoBlockDetailsGroup();
                         case QuickFix.Fields.Tags.NoLegs: return new QuickFix.FIX44.TradeCaptureReportRequestAck.NoLegsGroup();
                         case QuickFix.Fields.Tags.NoLegSecurityAltID: return new QuickFix.FIX44.TradeCaptureReportRequestAck.NoLegsGroup.NoLegSecurityAltIDGroup();
                     }
@@ -1036,11 +1083,13 @@ namespace QuickFix
                 {
                     switch (correspondingFieldID)
                     {
+                        case QuickFix.Fields.Tags.NumofCombiDefinitions: return new QuickFix.FIX44.TradeCaptureReport.NumofCombiDefinitionsGroup();
                         case QuickFix.Fields.Tags.NoSecurityAltID: return new QuickFix.FIX44.TradeCaptureReport.NoSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoEvents: return new QuickFix.FIX44.TradeCaptureReport.NoEventsGroup();
                         case QuickFix.Fields.Tags.NoUnderlyings: return new QuickFix.FIX44.TradeCaptureReport.NoUnderlyingsGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingSecurityAltID: return new QuickFix.FIX44.TradeCaptureReport.NoUnderlyingsGroup.NoUnderlyingSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingStips: return new QuickFix.FIX44.TradeCaptureReport.NoUnderlyingsGroup.NoUnderlyingStipsGroup();
+                        case QuickFix.Fields.Tags.NoBlockDetails: return new QuickFix.FIX44.TradeCaptureReport.NoUnderlyingsGroup.NoBlockDetailsGroup();
                         case QuickFix.Fields.Tags.NoPosAmt: return new QuickFix.FIX44.TradeCaptureReport.NoPosAmtGroup();
                         case QuickFix.Fields.Tags.NoLegs: return new QuickFix.FIX44.TradeCaptureReport.NoLegsGroup();
                         case QuickFix.Fields.Tags.NoLegSecurityAltID: return new QuickFix.FIX44.TradeCaptureReport.NoLegsGroup.NoLegSecurityAltIDGroup();
@@ -1114,6 +1163,7 @@ namespace QuickFix
                         case QuickFix.Fields.Tags.NoUnderlyings: return new QuickFix.FIX44.PositionMaintenanceRequest.NoUnderlyingsGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingSecurityAltID: return new QuickFix.FIX44.PositionMaintenanceRequest.NoUnderlyingsGroup.NoUnderlyingSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingStips: return new QuickFix.FIX44.PositionMaintenanceRequest.NoUnderlyingsGroup.NoUnderlyingStipsGroup();
+                        case QuickFix.Fields.Tags.NoBlockDetails: return new QuickFix.FIX44.PositionMaintenanceRequest.NoUnderlyingsGroup.NoBlockDetailsGroup();
                         case QuickFix.Fields.Tags.NoTradingSessions: return new QuickFix.FIX44.PositionMaintenanceRequest.NoTradingSessionsGroup();
                         case QuickFix.Fields.Tags.NoPositions: return new QuickFix.FIX44.PositionMaintenanceRequest.NoPositionsGroup();
                         case QuickFix.Fields.Tags.NoNestedPartyIDs: return new QuickFix.FIX44.PositionMaintenanceRequest.NoPositionsGroup.NoNestedPartyIDsGroup();
@@ -1134,6 +1184,7 @@ namespace QuickFix
                         case QuickFix.Fields.Tags.NoUnderlyings: return new QuickFix.FIX44.PositionMaintenanceReport.NoUnderlyingsGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingSecurityAltID: return new QuickFix.FIX44.PositionMaintenanceReport.NoUnderlyingsGroup.NoUnderlyingSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingStips: return new QuickFix.FIX44.PositionMaintenanceReport.NoUnderlyingsGroup.NoUnderlyingStipsGroup();
+                        case QuickFix.Fields.Tags.NoBlockDetails: return new QuickFix.FIX44.PositionMaintenanceReport.NoUnderlyingsGroup.NoBlockDetailsGroup();
                         case QuickFix.Fields.Tags.NoTradingSessions: return new QuickFix.FIX44.PositionMaintenanceReport.NoTradingSessionsGroup();
                         case QuickFix.Fields.Tags.NoPositions: return new QuickFix.FIX44.PositionMaintenanceReport.NoPositionsGroup();
                         case QuickFix.Fields.Tags.NoNestedPartyIDs: return new QuickFix.FIX44.PositionMaintenanceReport.NoPositionsGroup.NoNestedPartyIDsGroup();
@@ -1155,6 +1206,7 @@ namespace QuickFix
                         case QuickFix.Fields.Tags.NoUnderlyings: return new QuickFix.FIX44.RequestForPositions.NoUnderlyingsGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingSecurityAltID: return new QuickFix.FIX44.RequestForPositions.NoUnderlyingsGroup.NoUnderlyingSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingStips: return new QuickFix.FIX44.RequestForPositions.NoUnderlyingsGroup.NoUnderlyingStipsGroup();
+                        case QuickFix.Fields.Tags.NoBlockDetails: return new QuickFix.FIX44.RequestForPositions.NoUnderlyingsGroup.NoBlockDetailsGroup();
                         case QuickFix.Fields.Tags.NoTradingSessions: return new QuickFix.FIX44.RequestForPositions.NoTradingSessionsGroup();
                     }
                 }
@@ -1172,6 +1224,7 @@ namespace QuickFix
                         case QuickFix.Fields.Tags.NoUnderlyings: return new QuickFix.FIX44.RequestForPositionsAck.NoUnderlyingsGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingSecurityAltID: return new QuickFix.FIX44.RequestForPositionsAck.NoUnderlyingsGroup.NoUnderlyingSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingStips: return new QuickFix.FIX44.RequestForPositionsAck.NoUnderlyingsGroup.NoUnderlyingStipsGroup();
+                        case QuickFix.Fields.Tags.NoBlockDetails: return new QuickFix.FIX44.RequestForPositionsAck.NoUnderlyingsGroup.NoBlockDetailsGroup();
                     }
                 }
 
@@ -1188,6 +1241,7 @@ namespace QuickFix
                         case QuickFix.Fields.Tags.NoUnderlyings: return new QuickFix.FIX44.PositionReport.NoUnderlyingsGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingSecurityAltID: return new QuickFix.FIX44.PositionReport.NoUnderlyingsGroup.NoUnderlyingSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingStips: return new QuickFix.FIX44.PositionReport.NoUnderlyingsGroup.NoUnderlyingStipsGroup();
+                        case QuickFix.Fields.Tags.NoBlockDetails: return new QuickFix.FIX44.PositionReport.NoUnderlyingsGroup.NoBlockDetailsGroup();
                         case QuickFix.Fields.Tags.NoPositions: return new QuickFix.FIX44.PositionReport.NoPositionsGroup();
                         case QuickFix.Fields.Tags.NoNestedPartyIDs: return new QuickFix.FIX44.PositionReport.NoPositionsGroup.NoNestedPartyIDsGroup();
                         case QuickFix.Fields.Tags.NoNestedPartySubIDs: return new QuickFix.FIX44.PositionReport.NoPositionsGroup.NoNestedPartyIDsGroup.NoNestedPartySubIDsGroup();
@@ -1207,6 +1261,7 @@ namespace QuickFix
                         case QuickFix.Fields.Tags.NoUnderlyings: return new QuickFix.FIX44.AssignmentReport.NoUnderlyingsGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingSecurityAltID: return new QuickFix.FIX44.AssignmentReport.NoUnderlyingsGroup.NoUnderlyingSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingStips: return new QuickFix.FIX44.AssignmentReport.NoUnderlyingsGroup.NoUnderlyingStipsGroup();
+                        case QuickFix.Fields.Tags.NoBlockDetails: return new QuickFix.FIX44.AssignmentReport.NoUnderlyingsGroup.NoBlockDetailsGroup();
                         case QuickFix.Fields.Tags.NoPositions: return new QuickFix.FIX44.AssignmentReport.NoPositionsGroup();
                         case QuickFix.Fields.Tags.NoNestedPartyIDs: return new QuickFix.FIX44.AssignmentReport.NoPositionsGroup.NoNestedPartyIDsGroup();
                         case QuickFix.Fields.Tags.NoNestedPartySubIDs: return new QuickFix.FIX44.AssignmentReport.NoPositionsGroup.NoNestedPartyIDsGroup.NoNestedPartySubIDsGroup();
@@ -1228,6 +1283,7 @@ namespace QuickFix
                         case QuickFix.Fields.Tags.NoUnderlyings: return new QuickFix.FIX44.CollateralRequest.NoUnderlyingsGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingSecurityAltID: return new QuickFix.FIX44.CollateralRequest.NoUnderlyingsGroup.NoUnderlyingSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingStips: return new QuickFix.FIX44.CollateralRequest.NoUnderlyingsGroup.NoUnderlyingStipsGroup();
+                        case QuickFix.Fields.Tags.NoBlockDetails: return new QuickFix.FIX44.CollateralRequest.NoUnderlyingsGroup.NoBlockDetailsGroup();
                         case QuickFix.Fields.Tags.NoTrdRegTimestamps: return new QuickFix.FIX44.CollateralRequest.NoTrdRegTimestampsGroup();
                         case QuickFix.Fields.Tags.NoMiscFees: return new QuickFix.FIX44.CollateralRequest.NoMiscFeesGroup();
                         case QuickFix.Fields.Tags.NoStipulations: return new QuickFix.FIX44.CollateralRequest.NoStipulationsGroup();
@@ -1248,6 +1304,7 @@ namespace QuickFix
                         case QuickFix.Fields.Tags.NoUnderlyings: return new QuickFix.FIX44.CollateralAssignment.NoUnderlyingsGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingSecurityAltID: return new QuickFix.FIX44.CollateralAssignment.NoUnderlyingsGroup.NoUnderlyingSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingStips: return new QuickFix.FIX44.CollateralAssignment.NoUnderlyingsGroup.NoUnderlyingStipsGroup();
+                        case QuickFix.Fields.Tags.NoBlockDetails: return new QuickFix.FIX44.CollateralAssignment.NoUnderlyingsGroup.NoBlockDetailsGroup();
                         case QuickFix.Fields.Tags.NoTrdRegTimestamps: return new QuickFix.FIX44.CollateralAssignment.NoTrdRegTimestampsGroup();
                         case QuickFix.Fields.Tags.NoMiscFees: return new QuickFix.FIX44.CollateralAssignment.NoMiscFeesGroup();
                         case QuickFix.Fields.Tags.NoStipulations: return new QuickFix.FIX44.CollateralAssignment.NoStipulationsGroup();
@@ -1271,6 +1328,7 @@ namespace QuickFix
                         case QuickFix.Fields.Tags.NoUnderlyings: return new QuickFix.FIX44.CollateralResponse.NoUnderlyingsGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingSecurityAltID: return new QuickFix.FIX44.CollateralResponse.NoUnderlyingsGroup.NoUnderlyingSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingStips: return new QuickFix.FIX44.CollateralResponse.NoUnderlyingsGroup.NoUnderlyingStipsGroup();
+                        case QuickFix.Fields.Tags.NoBlockDetails: return new QuickFix.FIX44.CollateralResponse.NoUnderlyingsGroup.NoBlockDetailsGroup();
                         case QuickFix.Fields.Tags.NoTrdRegTimestamps: return new QuickFix.FIX44.CollateralResponse.NoTrdRegTimestampsGroup();
                         case QuickFix.Fields.Tags.NoMiscFees: return new QuickFix.FIX44.CollateralResponse.NoMiscFeesGroup();
                         case QuickFix.Fields.Tags.NoStipulations: return new QuickFix.FIX44.CollateralResponse.NoStipulationsGroup();
@@ -1291,6 +1349,7 @@ namespace QuickFix
                         case QuickFix.Fields.Tags.NoUnderlyings: return new QuickFix.FIX44.CollateralReport.NoUnderlyingsGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingSecurityAltID: return new QuickFix.FIX44.CollateralReport.NoUnderlyingsGroup.NoUnderlyingSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingStips: return new QuickFix.FIX44.CollateralReport.NoUnderlyingsGroup.NoUnderlyingStipsGroup();
+                        case QuickFix.Fields.Tags.NoBlockDetails: return new QuickFix.FIX44.CollateralReport.NoUnderlyingsGroup.NoBlockDetailsGroup();
                         case QuickFix.Fields.Tags.NoTrdRegTimestamps: return new QuickFix.FIX44.CollateralReport.NoTrdRegTimestampsGroup();
                         case QuickFix.Fields.Tags.NoMiscFees: return new QuickFix.FIX44.CollateralReport.NoMiscFeesGroup();
                         case QuickFix.Fields.Tags.NoStipulations: return new QuickFix.FIX44.CollateralReport.NoStipulationsGroup();
@@ -1315,6 +1374,7 @@ namespace QuickFix
                         case QuickFix.Fields.Tags.NoUnderlyings: return new QuickFix.FIX44.CollateralInquiry.NoUnderlyingsGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingSecurityAltID: return new QuickFix.FIX44.CollateralInquiry.NoUnderlyingsGroup.NoUnderlyingSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingStips: return new QuickFix.FIX44.CollateralInquiry.NoUnderlyingsGroup.NoUnderlyingStipsGroup();
+                        case QuickFix.Fields.Tags.NoBlockDetails: return new QuickFix.FIX44.CollateralInquiry.NoUnderlyingsGroup.NoBlockDetailsGroup();
                         case QuickFix.Fields.Tags.NoTrdRegTimestamps: return new QuickFix.FIX44.CollateralInquiry.NoTrdRegTimestampsGroup();
                         case QuickFix.Fields.Tags.NoStipulations: return new QuickFix.FIX44.CollateralInquiry.NoStipulationsGroup();
                         case QuickFix.Fields.Tags.NoDlvyInst: return new QuickFix.FIX44.CollateralInquiry.NoDlvyInstGroup();
@@ -1354,6 +1414,17 @@ namespace QuickFix
                         case QuickFix.Fields.Tags.NoUnderlyings: return new QuickFix.FIX44.CollateralInquiryAck.NoUnderlyingsGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingSecurityAltID: return new QuickFix.FIX44.CollateralInquiryAck.NoUnderlyingsGroup.NoUnderlyingSecurityAltIDGroup();
                         case QuickFix.Fields.Tags.NoUnderlyingStips: return new QuickFix.FIX44.CollateralInquiryAck.NoUnderlyingsGroup.NoUnderlyingStipsGroup();
+                        case QuickFix.Fields.Tags.NoBlockDetails: return new QuickFix.FIX44.CollateralInquiryAck.NoUnderlyingsGroup.NoBlockDetailsGroup();
+                    }
+                }
+
+                if (QuickFix.FIX44.DefinedStrategy.MsgType.Equals(msgType))
+                {
+                    switch (correspondingFieldID)
+                    {
+                        case QuickFix.Fields.Tags.NoBlockDetails: return new QuickFix.FIX44.DefinedStrategy.NoBlockDetailsGroup();
+                        case QuickFix.Fields.Tags.NoUnderlyingSecurityAltID: return new QuickFix.FIX44.DefinedStrategy.NoUnderlyingSecurityAltIDGroup();
+                        case QuickFix.Fields.Tags.NoLegs: return new QuickFix.FIX44.DefinedStrategy.NoLegsGroup();
                     }
                 }
 

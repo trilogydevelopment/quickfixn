@@ -261,6 +261,7 @@
     <Compile Include="Message\FIX44\NetworkStatusRequest.cs" />
     <Compile Include="Message\FIX44\NetworkStatusResponse.cs" />
     <Compile Include="Message\FIX44\CollateralInquiryAck.cs" />
+    <Compile Include="Message\FIX44\DefinedStrategy.cs" />
     <Compile Include="Message\FIX50\IOI.cs" />
     <Compile Include="Message\FIX50\Advertisement.cs" />
     <Compile Include="Message\FIX50\ExecutionReport.cs" />
