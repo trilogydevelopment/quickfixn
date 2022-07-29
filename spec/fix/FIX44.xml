@@ -6933,7 +6933,7 @@
 		<field number="9005" name="SecondaryLegSymbol" type="STRING" />
 		<field number="9006" name="StrategyPreference" type="INT" />
 		<field number="9007" name="TimeStampPreference" type="INT" />
-		<field number="9013" name="IncrementPrice" type="FLOAT" />
+		<field number="9013" name="IncrementPrice" type="PRICE" />
 		<field number="9014" name="IncrementQty" type="FLOAT" />
 		<field number="9017" name="LotSize" type="FLOAT" />
 		<field number="9018" name="NumOfLots" type="INT" />
@@ -6951,7 +6951,7 @@
 		<field number="9032" name="TickValue" type="FLOAT" />
 		<field number="9033" name="HedgeOnly" type="INT" />
 		<field number="9034" name="OverrideBlockMin" type="INT" />
-		<field number="9040" name="OffExchangeIncrementPrice" type="FLOAT" />
+		<field number="9040" name="OffExchangeIncrementPrice" type="PRICE" />
 		<field number="9041" name="OffExchangeIncrementQty" type="FLOAT" />
 		<field number="9049" name="UDSAllowed" type="INT" />
 		<field number="9061" name="ProductId" type="INT" />
@@ -6961,8 +6961,8 @@
 		<field number="9071" name="BlockDetailsBlockType" type="INT" />
 		<field number="9072" name="BlockDetailsTradeType" type="STRING" />
 		<field number="9073" name="BlockDetailsMinQty" type="FLOAT" />
-		<field number="9083" name="NumOfDecimalPrice" type="INT" />
-		<field number="9084" name="NumOfDecimalQty" type="INT" />
+		<field number="9083" name="NumOfDecimalPrice" type="FLOAT" />
+		<field number="9084" name="NumOfDecimalQty" type="FLOAT" />
 		<field number="9085" name="Granularity" type="STRING" />
 		<field number="9091" name="ClearedAlias" type="STRING" />
 		<field number="9092" name="Denominator" type="INT" />

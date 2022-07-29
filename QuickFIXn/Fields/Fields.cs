@@ -16715,11 +16715,11 @@ namespace QuickFix.Fields
     /// <summary>
     /// NumOfDecimalPrice Field
     /// </summary>/
-    public sealed class NumOfDecimalPrice : IntField
+    public sealed class NumOfDecimalPrice : DecimalField
     {
         public NumOfDecimalPrice()
             :base(Tags.NumOfDecimalPrice) {}
-        public NumOfDecimalPrice(int val)
+        public NumOfDecimalPrice(Decimal val)
             :base(Tags.NumOfDecimalPrice, val) {}
 
     }
@@ -16728,11 +16728,11 @@ namespace QuickFix.Fields
     /// <summary>
     /// NumOfDecimalQty Field
     /// </summary>/
-    public sealed class NumOfDecimalQty : IntField
+    public sealed class NumOfDecimalQty : DecimalField
     {
         public NumOfDecimalQty()
             :base(Tags.NumOfDecimalQty) {}
-        public NumOfDecimalQty(int val)
+        public NumOfDecimalQty(Decimal val)
             :base(Tags.NumOfDecimalQty, val) {}
 
     }
